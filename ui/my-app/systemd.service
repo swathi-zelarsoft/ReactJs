@@ -1,0 +1,15 @@
+[Unit]
+Description=react service
+[Service]
+Type=simple
+Environment=REACT_APP_API=http://192.168.0.96:53535/api/
+Environment=REACT_APP_PHOTOS=http://192.168.0.96:53535/Photos/
+Restart=on-failure
+WorkingDirectory=/root/ReactJs/React
+ExecStart=npm start
+Restart=on-failure
+SyslogIdentifier=react
+[Install]
+WantedBy=multi-user.target
+
+

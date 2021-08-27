@@ -27,7 +27,7 @@ export class Employee extends Component{
             this.setState({employees:data});
         });
 
-        fetch(variables.API_URL+'department')
+        fetch("http://192.168.0.96:5000/api/department")
         .then(response=>response.json())
         .then(data=>{
             this.setState({departments:data});

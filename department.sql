@@ -1,7 +1,8 @@
 create database if not exists dbo;
 USE dbo;
-DROP TABLE IF EXISTS `dbo.department`;
-CREATE TABLE dbo.department(
+DROP TABLE IF EXISTS `dbo.Department`;
+GRANT ALL PRIVILEGES ON dbo.* to root@localhost;
+CREATE TABLE dbo.Department(
   DepartmentId int AUTO_INCREMENT,
   DepartmentName nvarchar(500),
   PRIMARY KEY (DepartmentId)
